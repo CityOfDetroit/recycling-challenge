@@ -1,48 +1,150 @@
 /*--General Styles--*/
 body{
-    background: url('../imgs/piskel/couver_troit.png');
+    background:grey;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
 }
 .city-green-dark{
-	color: #003B49;
+  color: #003B49;
 }
 .city-green-med{
-	color: #279989;
+  color: #279989;
 }
 .city-green-light{
-	color: #B7CDC2;
+  color: #B7CDC2;
 }
 .good{
-	color:#5cb85c;
+  color:#5cb85c;
 }
 .bad{
-	color:#d9534f;
+  color:#d9534f;
 }
 .logo{
-    max-width: 150px;
-    margin-top:15px;
+    width: 95px;
+    float: left;
+    z-index: 1000;
+    position: relative;
+    top:0;
+    left:0;
 }
 li{
     list-style-type: none;
     display: inline-block;
     margin: 15px;
 }
+img{
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+/*--Scenery--*/
+.scene{
+    width: 100%;
+    position: relative;
+           -webkit-transition:all 0.5s ease;
+    -moz-transition:all 0.5s ease;
+    transition:all 0.5s ease;
+}
+.sky{
+    background: skyblue;
+    height: 35%;
+    min-height: 175.5px;
+    border-bottom:2px solid black;
+}
+  .clouds div{
+    width: 15%;
+    position: absolute;
+  }
+  #cloud_1{
+      left:10%;
+      top:3%;
+  }
+  #cloud_2{
+      left:30%;
+      top:5%;
+  }
+  #cloud_3{
+      left:65%;
+      top:3%;
+  }
+  #cloud_4{
+      right:1%;
+      top:5%;
+  }
+.grass{
+    background: #4DBD33;
+    height:12%;
+    min-height: 35px;
+}
+  .skyline{
+    text-align: right;
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 100%;
+  }
+  .buildings{
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left:1%;
+  }
+  .buildings img{
+    height: 100%;
+  }
+.sidewalk{
+    background: darkgrey;
+    height:5%;
+    min-height: 22px;
+    border-top:2px solid black;
+}
+.street{
+    background: grey;
+    height:27%;
+    min-height: 70px;
+    border-top:2px solid black;
+}
 /*--Load Screen Styles--*/
 #app{
-    display: none;
-    padding:5%;
+    height: 100vh;
+    overflow: hidden;
+    min-width: 480px;
+    min-height: 320px;
 }
-.signup-form{
-    display: none;
-}
-.loading, .signup-form{
+.instructions, .loading, .signup-form, #warning-message{
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255,255,255,0.8);
-    z-index: 10;
+    background: white;
+    z-index: 9999;
     text-align: center;
+}
+.signup-form{
+    display: none;
+    background: rgba(255,255,255,0.7);
+}
+.instructions > div > p, .signup-form > p, #warning-message p{
+  font-size: 1.5em;
+}
+.instructions > div > button, .signup-form > div > button, .signup-form > div > a > button{
+  padding: .5em;
+  font-size: 1.5em;
+  border: 2px solid #0099cc;
+  background-color: #fff;
+  color: #0099cc;
+  transition: all .2s ease-in-out;
+}
+.signup-form > div > a > button{
+  margin-left: 1em;
+}
+.instructions > div > button:hover, .signup-form > div > button:hover, .signup-form > div > a > button:hover{
+  padding: .5em;
+  font-size: 1.5em;
+  border: 2px solid #0099cc;
+  background-color: #0099cc;
+  color: #fff;
+  transition: all .2s ease-in-out;
 }
 .loading div,.signup-form form{
     top:33%;
@@ -59,17 +161,245 @@ li{
 /*--Signup Form--*/
 /*--Product/Receptacle styles--*/
 .products{
-    text-align: center;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+}
+.products li{
+  display: none;
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  text-align: center;
 }
 .products img {
-    max-width: 115px;
-    max-height: 115px; 
+    max-height: 100%;
     cursor: pointer;
 }
 #receptacles{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
     text-align: center;
+}
+#receptacles figure{
+    display: inline-block;
+}
+#receptacles div{
+  display:inline-block;
+  width:15%;
+    position: relative;
+    bottom: 20px;
+           -webkit-transition:all 0.5s ease;
+    -moz-transition:all 0.5s ease;
+    transition:all 0.5s ease;
+}
+#receptacles .disabled{
+  opacity: 0.8;
+}
+#receptacles .plus, #receptacles .minus{
+  width: 100%;
+  display: none;
+  position: relative;
+}
+#receptacles .plus img, #receptacles .minus img{
+  width: 60px;
+}
+.bins{
+  margin-left:5%;
+  vertical-align: bottom;
+}
+#receptacles div#recycle-here{
+    position: relative;
+    width: 50%;
+}
+#receptacles div#recycle-here figcaption{
+    color:white;
+    font-weight: bold;
+    font-size:10.5px;
+    position: absolute;
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+    font-family: 'Open Sans', sans-serif;
 }
 /*--Draggable Styles--*/
 .ui-draggable-dragging{
     z-index: 100;
+}
+.ui-droppable-hover{
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+           -webkit-transition:all 0.5s ease;
+    -moz-transition:all 0.5s ease;
+    transition:all 0.5s ease;
+}
+/*Greater than iPhone 4, less than large phone 'phablet'*/
+@media screen and (min-width: 481px) and (max-width: 670px) {
+  #app{
+    min-height: 320px;
+  }
+  .logo{
+    width: 110px;
+  }
+  .sky{
+    height: 45%;
+    min-height: 115px;
+  }
+  .sidewalk{
+    height:5%;
+  }
+  .street{
+    height:37%;
+  }
+  .products li{
+    display: none;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top:10px;
+  }
+  #receptacles .plus img, #receptacles .minus img{
+    width: 70px;
+  }
+  .instructions > div, .signup-form > div{
+    position: relative;
+    top: 5%;
+  }
+}
+/*Large phone 'Phablet' (iPhone6+), less than tablet*/
+@media screen and (min-width: 671px) and (max-width: 767px) {
+  #app{
+    min-height: 420px;
+    max-height: 660px;
+  }
+  .logo{
+    width: 120px;
+  }
+  .sky{
+    height: 45%;
+    min-height: 175.5px;
+  }
+  .street{
+    height:38%;
+    min-height: 170px;
+  }
+  .products li{
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top:20px;
+  }
+  #receptacles div{
+    bottom:35px;
+  }
+  #receptacles .plus img, #receptacles .minus img{
+    width: 80px;
+  }
+  #receptacles div#recycle-here figcaption{
+    font-size:14.5px;
+  }
+  .instructions > div, .signup-form > div{
+    position: relative;
+    top: 30%;
+  }
+}
+/*Tablet, older desktop computer*/
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  #app{
+    min-height: 480px;
+  }
+  .logo{
+    width: 135px;
+  }
+  .sky{
+    height: 45%;
+    min-height: 175.5px;
+  }
+  .street{
+    height:38%;
+    min-height: 170px;
+  }
+  .products li{
+    display: none;
+    position: absolute;
+    width: 115px;
+    height: 115px;
+    top:20px;
+  }
+  #receptacles div{
+    bottom:35px;
+  }
+  #receptacles .plus img, #receptacles .minus img{
+    width: 90px;
+  }  
+  #receptacles div#recycle-here figcaption{
+    font-size:17px;
+  }
+  .instructions > div, .signup-form > div{
+    position: relative;
+    top: 30%;
+  }
+}
+/*Large screen computer*/
+@media screen and (min-width: 1281px){ 
+  #app{
+    min-height: 800px;
+  }
+  .logo{
+    width: 175px;
+  }
+    .scene{
+  }
+  .sky{
+      height: 40%;
+      min-height: 175.5px;
+  }
+  .sidewalk{
+      height:5%;
+      min-height: 22px;
+  }
+  .street{
+      height:40%;
+      min-height: 70px;
+  }
+  .products li{
+    display: none;
+    position: absolute;
+    width: 155px;
+    height: 155px;
+    top:20px;
+  }
+  .bins{
+    margin-left:0px;
+  }
+  #receptacles div#recycle-here{
+    left:-110px;
+  }
+  #receptacles .plus img, #receptacles .minus img{
+    width: 100px;
+  }
+  #receptacles div.bins {
+    bottom: 0px;
+  }
+  #receptacles div#recycle-here figcaption{
+    font-size:20px;
+  }
+  .instructions > div, .signup-form > div{
+    position: relative;
+    top: 30%;
+  }
+}
+
+#warning-message { display: none; }
+@media only screen and (orientation:portrait){
+    #app { display:none; }
+    #warning-message { display:block; }
+}
+@media only screen and (orientation:landscape){
+    #warning-message { display:none; }
 }

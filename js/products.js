@@ -1,59 +1,71 @@
 var products = [
 	{
 		name: "Batteries",
+		disposal: "recycle-here", 
+		img: "imgs/flat/batteries.png"
+	},
+	{	name: "Trash Bag",
 		disposal: "trash-can", 
-		img: "imgs/battery.png"
+		img: "imgs/flat/trashbag.png"
 	},
 	{	name: "Lightbulb",
-		disposal: "trash-can", 
-		img: "imgs/bulb.png"
+		disposal: "recycle-here", 
+		img: "imgs/flat/lightbulb.png"
 	},
-	{	name: "Can",
+	{	name: "Sandwich Bag",
+		disposal: "trash-can", 
+		img: "imgs/flat/ziploc.png"
+	},
+	{	name: "Soup Can",
 		disposal: "recycle-bin", 
-		img: "imgs/can.png"
+		img: "imgs/flat/soupcan.png"
+	},
+	{	name: "Styrofoam",
+		disposal: "recycle-here", 
+		img: "imgs/flat/styrofoam.png"
 	},
 	{	name: "Chip Bag",
 		disposal: "trash-can", 
-		img: "imgs/chips.png"
+		img: "imgs/flat/chips.png"
 	},
-	{	name: "Envelope",
+	{	name: "Aluminum",
 		disposal: "recycle-bin", 
-		img: "imgs/envelope.png"
+		img: "imgs/flat/aluminum.png"
 	},
-	{	name: "Glass",
-		disposal: "recycle-bin", 
-		img: "imgs/glass_jar.png"
-	},
-	{	name: "Juice Box",
+	{	name: "Diaper",
 		disposal: "trash-can", 
-		img: "imgs/juice_box.png"
+		img: "imgs/flat/diaper.png"
 	},
-	{	name: "Milk Jug",
+	{	name: "Magazine",
 		disposal: "recycle-bin", 
-		img: "imgs/milk.png"
+		img: "imgs/flat/magazine.png"
 	},
-	{	name: "Napkin",
-		disposal: "trash-can", 
-		img: "imgs/napkin.png"
+	{	name: "Cardboard",
+		disposal: "recycle-bin", 
+		img: "imgs/flat/cardboard.png"
+	},
+	{	name: "Detergent",
+		disposal: "recycle-bin", 
+		img: "imgs/flat/detergent.png"
 	},
 	{	name: "Newspaper",
 		disposal: "recycle-bin", 
-		img: "imgs/newspaper.png"
-	},
-	{	name: "Pizza Box",
-		disposal: "trash-can", 
-		img: "imgs/pizza_box.png"
+		img: "imgs/flat/newspaper.png"
 	},
 	{	name: "Plastic Bag",
-		disposal: "recycle-bin", 
-		img: "imgs/plastic_bag.png"
+		disposal: "recycle-here", 
+		img: "imgs/flat/plastic_bag.png"
 	},
-	{	name: "Soda Can",
+	{	name: "Wine",
 		disposal: "recycle-bin", 
-		img: "imgs/soda.png"
+		img: "imgs/flat/wine.png"
+	},
+	{	name: "Food",
+		disposal: "trash-can", 
+		img: "imgs/flat/food.png"
 	},
 	{	name: "Water Bottle",
 		disposal: "recycle-bin", 
-		img: "imgs/water_bottle.png"
+		img: "imgs/flat/water_bottle.png"
 	}
 ]

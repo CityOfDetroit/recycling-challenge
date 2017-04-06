@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Recycling App</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/styles.css"/>
@@ -10,6 +11,16 @@
 		<![endif]-->
 	</head>
 	<body>
+		<div id="warning-message">
+		    <h2>This website is only viewable in landscape mode.</h2>
+		</div>
+        <div class="instructions">
+            <div>
+               <h1>Welcome to Recycling Challenge!</h1>
+               <p>Drag each item to the corresponding container or place. <br>Get as many correct items as possible to win a <strong>FREE</strong> recycling container.</p>
+               <button>START</button>
+            </div>
+        </div>
         <div class="loading">
             <div>
                 <img src="imgs/logo/hourglass.gif" alt="loading">
@@ -17,42 +28,53 @@
             </div>
         </div>
         <div class="signup-form">
-			<form>
-				<label>Enter your address for free stuff...</label>
-				<input type="name" name="address" placeholder="1234 Jefferson Ave, 48226" />
-				<input type="name" name="spamguard" style="display: none">
-			</form>
+        	<button id="play-again">Play Again</button>
+        	<p class="win-message">To sign up for free recycling container, click here:<a href="http://codstaging.detroitmi.gov/PublicWorks/recyclingContainerForm"><button>Sign Up</button></a></p>
         </div>
 		<div id="app">
-			<div class="score">Score: <span>0</span></div>
-			<div class="container products">
-				<div class="row first">
-					<div class="col-md-12">
-						<ul>
-						</ul>
-					</div>
+			<div class="logo"><a href="/PublicWorks"><img src="imgs/logo/Logo-Vertical.png"/></a></div>
+			<div class="products"><ul></ul></div>
+			<div class="sky scene">
+				<div class="clouds">
+					<div id="cloud_1"><img src="imgs/flat/cloud.png"/></div>
+					<div id="cloud_2"><img src="imgs/flat/cloud.png"/></div>
+					<div id="cloud_3"><img src="imgs/flat/cloud.png"/></div>
+					<div id="cloud_4"><img src="imgs/flat/cloud.png"/></div>
 				</div>
-				<div class="row second">
-					<div class="col-md-12">
-						<ul>
-						</ul>
-					</div>
+				<div class="skyline">
+					<div class="buildings" id="penobscot"><img src="imgs/flat/penobscot.png"></div>
+					<div class="buildings" id="guardian"><img src="imgs/flat/guardian.png"></div>
+					<div class="buildings" id="onedetroit"><img src="imgs/flat/onedetroit.png"></div>
+					<div class="buildings" id="rencen"><img src="imgs/flat/rencen.png"></div>
 				</div>
-			</div>
-			<div class="row" id="receptacles">
-				<div class="col-md-12">
-					<ul>
-						<li id="recycle-bin"><img src="imgs/recycle_bin.png"/></li>
-						<li id="trash-can"><img src="imgs/trash_can.png"/></li>
-					</ul>
+			</div>				
+			<div class="grass scene">&nbsp;</div>
+			<div class="sidewalk scene">&nbsp;</div>
+			<div class="street scene">
+				<div class="" id="receptacles">
+							<div id="recycle-here">
+								<div class="plus">
+									<img src="imgs/plus.png"/>
+								</div>
+								<div class="minus">
+									<img src="imgs/minus.png"/>
+								</div>
+								<figure>
+									<img src="imgs/flat/recycle_here_r.png"/><figcaption>Recycle Here! 1331 Holden St Detroit, MI 48202</figcaption>
+								</figure>
+							</div>
+							<div id="recycle-bin" class="bins"><div class="plus"><img src="imgs/plus.png"/></div><div class="minus"><img src="imgs/minus.png"/></div><img src="imgs/flat/recycle_bin.png"/></div>
+							<div id="trash-can" class="bins"><div class="plus"><img src="imgs/plus.png"/></div><div class="minus"><img src="imgs/minus.png"/></div><img src="imgs/flat/trash_can.png"/></div>
 				</div>
 			</div>
 		</div>
 		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-		<script   src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script>
+		<script   src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
 		<script src="js/products.js"></script>
+		<script src="js/marquee.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>

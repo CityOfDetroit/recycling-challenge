@@ -1,47 +1,125 @@
 $(document).ready(function() {
-    var numProducts = products.length;
-    for (var i = numProducts - 1; i >= 0; i--) {
-        if($('.products .first ul li').length<7){
-            $('.products .first ul').append('<li data-disposal="' + products[i].disposal + '"><img src="' + products[i].img + '"/></li>');
-        }
-        else{
-            $('.products .second ul').append('<li data-disposal="' + products[i].disposal + '"><img src="' + products[i].img + '"/></li>');
-        }
-    }
-    $('.loading').hide();
-    $('#app').show();
-    $( ".products li" ).draggable({ 
-        revert: true 
-    });
-    var score = 0;
-    var count = 
-    $( "#receptacles li" ).droppable({
-      drop: function( event, ui ) {
-        var bin_type = this.id;
-        var active_product = ui.draggable;
-        var product_type = active_product.attr('data-disposal');
-            //correct answer
-        if(bin_type===product_type){
-            active_product.fadeTo(300, 0, function(){
-               $(active_product).css("visibility", "hidden");   
-            });
-            score = score +1;
-            numProducts = numProducts -1;
-            updateScore();
-            //game completed function
-            if(numProducts === 0){
-                alert('You Win!');
-                $('.signup-form').show();
+    function recycleChallenge(){
+        //continue to app
+        $('.instructions button').click(function(){
+            $('.instructions').hide();
+            $('#app').show();
+        });
+        var numProducts = products.length;
+        //append products to DOM
+        function appendProducts(){
+            for (var i = 0; i < numProducts; i++) {
+                $('.products ul').append('<li data-list-no="' + i + '" data-disposal="' + products[i].disposal + '" id="' + products[i].name + '"><img src="' + products[i].img + '"/></li>');
             }
         }
-        //wrong answer
-        else{
-            score = score -1;
-            updateScore();
+        appendProducts();
+        
+        //show next product
+        function nextProduct(){
+            var currentProduct = parseInt(numProducts-1);
+            $('.products ul').find('[data-list-no="' + currentProduct + '"]').fadeIn();
         }
-      }
-    });
-    function updateScore(){
-        $('.score span').text(score);
+        nextProduct();
+
+        //hide load screen, show app after list items have been appended
+        function centerProducts(){
+            var halfScreen = (($(window).width())/2);
+            $('.products li').css('left', (halfScreen));
+        }
+        centerProducts();
+        resizeBuildings();
+        $('.loading').hide();
+
+        //set score to 0
+        var score = 0;
+
+        //drag/drop functionality
+        $( ".products li" ).draggable({ 
+            containment: "#app",
+            revert: true,
+            scroll: false,
+            drag: function( event, ui ) {
+            }
+        });
+        $( "#receptacles div" ).droppable({
+          drop: function( event, ui ) {
+            var bin_type = this.id;
+            var active_product = ui.draggable;
+            var disposal_type = ui.draggable[0].dataset.disposal;
+            //correct answer
+            if(bin_type===disposal_type){
+                active_product.fadeTo(300, 0, function(){
+                   $(active_product).hide();   
+                });
+                showScore(bin_type, 'plus');
+                score = score +1;
+                numProducts = numProducts -1;
+                $('#receptacles div').droppable('enable').removeClass('disabled');
+                nextProduct();
+                //game completed function
+                if(numProducts === 0){
+                    console.log(score);
+                    console.log(score/products.length);
+                    if(score<0 && (score/products.length)<0.5){
+                        $('.win-message').hide();
+                    }
+                    $('.signup-form').show();
+                }
+            }
+            //wrong answer
+            else{
+                showScore(bin_type, 'minus');
+                $(this).droppable('disable').addClass('disabled');
+                score = score -1;
+            }
+          }
+        });
+
+        //resize building images to fit containers
+        function resizeBuildings(){
+                var $skyheight = $('.sky').height();
+                var newheight = parseInt($skyheight * 0.58);
+                $('.buildings').css({
+                    'height': newheight,
+                    'max-height': '238px'
+                });
+                $('#guardian').css('width', (newheight * 0.54));
+                $('#penobscot').css('width', (newheight * 0.3));
+                $('#onedetroit').css('width', (newheight * 0.33));
+                $('#rencen').css('width', (newheight * 0.78));
+            }
+
+        //score popup animation
+        function showScore(bintype, plusminus){
+            var $showScore = $('#' + bintype).find('.' + plusminus);
+                $showScore.show().animate({
+                    top: '-50px'
+                }, 300, 'linear', function(){
+                    $('.' + plusminus).fadeOut(300, function(){
+                        $(this).css('top','0px');
+                    });
+                });
+        }
+        $(window).resize(function(){
+            //adjust building size
+            var $width = $(this).width();
+            var $height = $(this).height();
+            if(($height/$width)>0.70){
+                $('#app').hide();
+                $('#warning-message').show();
+            }else{
+                $('#app').show();
+                $('#warning-message').hide();
+            }
+            centerProducts();
+            resizeBuildings();    
+        });
     }
+    recycleChallenge();
+    //play again
+    $('#play-again').click(function(){
+        $('.signup-form').hide();
+        $('.loading').show();
+        recycleChallenge();
+    });    
 });
