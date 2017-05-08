@@ -6,6 +6,18 @@ $(document).ready(function() {
             $('#app').show();
         });
         var numProducts = products.length;
+
+        function shuffle(sourceArray) {
+            for (var i = 0; i < sourceArray.length - 1; i++) {
+            var j = i + Math.floor(Math.random() * (sourceArray.length - i));
+
+            var temp = sourceArray[j];
+            sourceArray[j] = sourceArray[i];
+            sourceArray[i] = temp;
+            }
+            return sourceArray;
+        }
+        shuffle(products);
         //append products to DOM
         function appendProducts(){
             for (var i = 0; i < numProducts; i++) {
@@ -58,8 +70,6 @@ $(document).ready(function() {
                 nextProduct();
                 //game completed function
                 if(numProducts === 0){
-                    console.log(score);
-                    console.log(score/products.length);
                     if(score<0 && (score/products.length)<0.5){
                         $('.win-message').hide();
                     }
