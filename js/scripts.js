@@ -1,7 +1,21 @@
 $(document).ready(function() {
     function recycleChallenge(){
+        //show next instructions
+        $('.next-button').click(function(){
+            var currentPage = $(this).parent().attr('id');
+            var pageNum = currentPage[currentPage.length -1];
+            var nextPage = parseInt(pageNum) + 1;
+            var totalPages = $('.instruction-page').length;
+            $('#'+ currentPage).fadeOut(400, function(){
+                $('#page-'+ nextPage).fadeIn();
+                if(totalPages===nextPage){
+                    $('#start-button').show();
+                }
+            });
+        });
+
         //continue to app
-        $('.instructions button').click(function(){
+        $('#start-button').click(function(){
             $('.instructions').hide();
             $('#app').show();
         });

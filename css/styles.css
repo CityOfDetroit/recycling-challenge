@@ -4,6 +4,19 @@ body{
     overflow: hidden;
     font-family: 'Open Sans', sans-serif;
 }
+li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 15px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+h2{
+  font-size:20px;
+}
 .city-green-dark{
   color: #003B49;
 }
@@ -27,16 +40,7 @@ body{
     top:0;
     left:0;
 }
-li{
-    list-style-type: none;
-    display: inline-block;
-    margin: 15px;
-}
-img{
-    max-width: 100%;
-    height: auto;
-    width: auto\9; /* ie8 */
-}
+
 /*--Scenery--*/
 .scene{
     width: 100%;
@@ -127,20 +131,46 @@ img{
 .instructions > div > p, .signup-form > p, #warning-message p{
   font-size: 1.5em;
 }
-.instructions > div > button, .signup-form > div > button, .signup-form > div > a > button{
+.instructions button, .signup-form > div > button, .signup-form > div > a > button{
   padding: .5em;
-  font-size: 1.5em;
+  font-size: 1.2em;
   border: 2px solid #0099cc;
   background-color: #fff;
   color: #0099cc;
   transition: all .2s ease-in-out;
+  margin-top:20px;
+}
+.instructions ul{
+    width:350px;
+    margin: 0 auto;
+}
+.instructions li{
+  display: list-item;
+  text-align: left;
+  list-style-type: disc;
+  font-size:1.2em;
+  margin: 5px;
+  margin-left: 20px;
+}
+.instruction-page, #start-button{
+  display: none;
+}
+.instruction-page h2{
+  text-align: left;
+}
+#page-1{
+  display: block;
+}
+#page-2 button{
+  margin-top:-20px;
+}
+#page-3{
+  top:25%;
 }
 .signup-form > div > a > button{
   margin-left: 1em;
 }
-.instructions > div > button:hover, .signup-form > div > button:hover, .signup-form > div > a > button:hover{
-  padding: .5em;
-  font-size: 1.5em;
+.instructions button:hover, .signup-form > div > button:hover, .signup-form > div > a > button:hover{
   border: 2px solid #0099cc;
   background-color: #0099cc;
   color: #fff;
@@ -240,6 +270,9 @@ img{
 }
 /*Greater than iPhone 4, less than large phone 'phablet'*/
 @media screen and (min-width: 481px) and (max-width: 670px) {
+  h2{
+    font-size:25px;
+  }
   #app{
     min-height: 320px;
   }
@@ -270,9 +303,21 @@ img{
     position: relative;
     top: 5%;
   }
+  #page-2 button{
+    margin-top:20px;
+  }
+  .instructions ul{
+    width:500px;
+  }
+  .instructions li{
+    font-size:1.3em;
+  }
 }
 /*Large phone 'Phablet' (iPhone6+), less than tablet*/
 @media screen and (min-width: 671px) and (max-width: 767px) {
+  h2{
+    font-size: 30px;
+  }
   #app{
     min-height: 420px;
     max-height: 660px;
@@ -308,9 +353,21 @@ img{
     position: relative;
     top: 30%;
   }
+  #page-2 button{
+    margin-top:20px;
+  }
+  .instructions ul{
+    width:500px;
+  }
+  .instructions li{
+    font-size:1.3em;
+  }
 }
 /*Tablet, older desktop computer*/
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+  h2{
+    font-size: 30px;
+  }
   #app{
     min-height: 480px;
   }
@@ -343,11 +400,23 @@ img{
   }
   .instructions > div, .signup-form > div{
     position: relative;
-    top: 30%;
+    top: 25%;
+  }
+  #page-2 button{
+    margin-top:20px;
+  }
+  .instructions ul{
+    width:500px;
+  }
+  .instructions li{
+    font-size:1.4em;
   }
 }
 /*Large screen computer*/
 @media screen and (min-width: 1281px){ 
+  h2{
+    font-size: 30px;
+  }
   #app{
     min-height: 800px;
   }
@@ -393,6 +462,15 @@ img{
   .instructions > div, .signup-form > div{
     position: relative;
     top: 30%;
+  }
+  #page-2 button{
+    margin-top:20px;
+  }
+  .instructions ul{
+    width:500px;
+  }
+  .instructions li{
+    font-size:1.5em;
   }
 }
 
