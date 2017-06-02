@@ -126,10 +126,13 @@ h2{
 }
 .signup-form{
     display: none;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.95);
 }
-.instructions > div > p, .signup-form > p, #warning-message p{
+.instructions > div > p, .signup-form  p, #warning-message p{
   font-size: 1.5em;
+}
+.signup-form p{
+  padding: 5%;
 }
 .instructions button, .signup-form > div > button, .signup-form > div > a > button{
   padding: .5em;
@@ -163,9 +166,6 @@ h2{
 }
 #page-2 button{
   margin-top:-20px;
-}
-#page-3{
-  top:25%;
 }
 .signup-form > div > a > button{
   margin-left: 1em;
