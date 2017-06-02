@@ -35,7 +35,6 @@ $(document).ready(function() {
                 _img.src = this.src;
             }
             newImg.src = 'imgs/flat/recycle_here_r.png';
-        alert('repleaced');
             for (var i = 0; i < numProducts; i++) {
                 $('.products ul').append('<li data-list-no="' + i + '" data-disposal="' + products[i].disposal + '" id="' + products[i].name + '"><img src="' + products[i].img + '"/></li>');
             }
@@ -104,7 +103,6 @@ $(document).ready(function() {
                 $(this).droppable('disable').addClass('disabled');
                 score = score -1;
             }
-            alert(score);
           }
         });
 
