@@ -29,12 +29,6 @@ $(document).ready(function() {
         shuffle(products);
         //append products to DOM
         function appendProducts(){
-            var _img = document.getElementById('id1');
-            var newImg = new Image;
-            newImg.onload = function() {
-                _img.src = this.src;
-            }
-            newImg.src = 'imgs/flat/recycle_here_r.png';
             for (var i = 0; i < numProducts; i++) {
                 $('.products ul').append('<li data-list-no="' + i + '" data-disposal="' + products[i].disposal + '" id="' + products[i].name + '"><img src="' + products[i].img + '"/></li>');
             }
