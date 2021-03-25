@@ -53,7 +53,7 @@ var products = [
 		img: "imgs/flat/newspaper.png"
 	},
 	{	name: "Plastic Bag",
-		disposal: "recycle-here", 
+		disposal: "trash-can", 
 		img: "imgs/flat/plastic_bag.png"
 	},
 	{	name: "Wine",
