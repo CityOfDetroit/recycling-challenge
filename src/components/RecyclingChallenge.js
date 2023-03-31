@@ -1,6 +1,5 @@
 import bootstrap from '!!raw-loader!bootstrap/dist/css/bootstrap.min.css';
 import styles from '!!raw-loader!./RecyclingChallenge.css';
-import 'cod-design-system/src/components/atoms/Button/cod-button';
 export default class RecyclingChallenge extends HTMLElement {
     static get observedAttributes() {
         return ['data-step'];
@@ -24,19 +23,24 @@ export default class RecyclingChallenge extends HTMLElement {
         // Create result section
         this.appContent = document.createElement('div');
         this.appContent.id = 'app-content';
-        this.appContent.className = 'col-xs-12 col-sm-12 col-md-10 m-auto';
+        this.appContent.className = 'col-xs-12 col-sm-12 col-md-8 m-auto';
         let row = document.createElement('div');
         row.className = 'row';
         row.appendChild(this.appContent);
         shadow.appendChild(row);
+
+        // Track answers
+        this.answers = [];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
         this.loadSteps(newValue);
-        console.log(newValue)
     }
 
     loadSteps(step){
+        let rc = this;
+        let qBtns = null;
+        let shadow = this.shadowRoot;
         switch (step) {
             case '0':
                 this.appContent.innerHTML = `
@@ -74,7 +78,6 @@ export default class RecyclingChallenge extends HTMLElement {
 
                     <p class="text-center">If you represent a business or live in a multifamily building with five or more units, visit our <a href="https://detroitmi.gov/departments/department-public-works/refuse-collection/detroit-recycles/commercial-recycling-program" target="_blank">Detroit’s Commercial Recycling Program page.</p>
                 `;
-                let shadow = this.shadowRoot;
                 shadow.querySelector('button.accordion-button').addEventListener('click', (e) => {
                     let show = false;
                     let tmpClasses = shadow.querySelector('#collapseOne').className.split(' ');
@@ -94,9 +97,968 @@ export default class RecyclingChallenge extends HTMLElement {
                 break;
 
             case '1':
+                // Q1
                 this.appContent.innerHTML = `
-                <h2>Step 2</h2>
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%201.png" alt="plastic bag">
+                <p class="text-center mt-3"><strong>Q:</strong> True or false? Recyclables should be loose in your cart and not in a plastic bag.</p>
+                </div>
+                <div class="container text-center mb-2">
+                <cod-button data-id="q1-true" data-label="True" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-false" data-label="False" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                <p class="text-center">1/12</p>
                 `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            if(e.target.getAttribute('data-label') == 'True'){
+                                rc.answers.push('pass');
+                                rc.setAttribute('data-step', '2');
+                            }else{
+                                rc.setAttribute('data-step', '3');
+                            }
+                        }
+                    });
+                })
+                break;
+            
+            case '2':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%201.png" alt="plastic bag">
+                <h2 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="medium"></cod-icon> Correct!</h2>
+                <p class="text-center">Note: All of your recyclable items should be placed loosely in your recycling cart and not in a plastic bag. This helps the sorting process at the recycling center. </p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '4');
+                });
+                break;
+
+            case '3':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%201.png" alt="plastic bag">
+                <h2 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="medium"></cod-icon> Opps! It's true</h2>
+                <p class="text-center">Note: All of your recyclable items should be placed loosely in your recycling cart and not in a plastic bag. This helps the sorting process at the recycling center. </p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '4');
+                });
+                break;
+
+            case '4':
+                // Q2
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%202.png" alt="styrofoam cups">
+                <p class="text-center mt-3"><strong>Q:</strong> True or false? Styrofoam should be placed in your recycling cart.</p>
+                </div>
+                <div class="container text-center mb-2">
+                <cod-button data-id="q1-true" data-label="True" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-false" data-label="False" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                <p class="text-center">2/12</p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            if(e.target.getAttribute('data-label') == 'False'){
+                                rc.answers.push('pass');
+                                rc.setAttribute('data-step', '5');
+                            }else{
+                                rc.setAttribute('data-step', '6');
+                            }
+                        }
+                    });
+                })
+                break;
+
+            case '5':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%202.png" alt="styrofoam cups">
+                <h2 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="medium"></cod-icon> Correct!</h2>
+                <p class="text-center">Note: Styrofoam should NOT be recycled in your curbside recycling cart. However, you can recycle it by dropping it off at Recycle Here! at 5960 Lincoln Street on Mondays and Wednesdays from 10-6pm and Saturdays from 9-3pm. Recycle Here! also collects paper, cardboard, books, metal, plastic, batteries, and more!</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '7');
+                });
+                break;
+
+            case '6':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%202.png" alt="styrofoam cups">
+                <h2 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="medium"></cod-icon> Opps! It's false</h2>
+                <p class="text-center">Note: Styrofoam should NOT be recycled in your curbside recycling cart. However, you can recycle it by dropping it off at Recycle Here! at 5960 Lincoln Street on Mondays and Wednesdays from 10-6pm and Saturdays from 9-3pm. Recycle Here! also collects paper, cardboard, books, metal, plastic, batteries, and more!</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '7');
+                });
+                break;
+
+            case '7':
+                // Q3
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%203.png" alt="plastic bag">
+                <p class="text-center mt-3"><strong>Q:</strong> How can you recycle plastic bags? </p>
+                </div>
+                <div class="container text-center mb-2">
+                <div class="mb-1">
+                <cod-button data-id="q3-curbside" data-label="Curbside Recycling Cart" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div class="mb-1">
+                <cod-button data-id="q3-no-recycle" data-label="You can’t recycle plastic bags" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div>
+                <cod-button data-id="q3-drop-off" data-label="Drop off plastic bags at a retail store such as Meijer, Kroger, or your local market." data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                </div>
+                <p class="text-center">3/12</p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            if(e.target.getAttribute('data-label') == 'Drop off plastic bags at a retail store such as Meijer, Kroger, or your local market.'){
+                                rc.answers.push('pass');
+                                rc.setAttribute('data-step', '8');
+                            }else{
+                                rc.setAttribute('data-step', '9');
+                            }
+                        }
+                    });
+                })
+                break;
+
+            case '8':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%203.png" alt="plastic bag">
+                <h2 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="medium"></cod-icon> Correct!</h2>
+                <p class="text-center">Note: Plastic bags can be dropped off at a local grocer or retail stores to be recycled. Even better, you can reuse them or bring reusable totes to go shopping! DO NOT place plastic bags in our curbside carts, they jam up the machinery that sort our recyclables.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '10');
+                });
+                break;
+
+            case '9':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%203.png" alt="plastic bag">
+                <h2 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="medium"></cod-icon> Opps! It's drop them off</h2>
+                <p class="text-center">Note: Plastic bags can be dropped off at a local grocer or retail stores to be recycled. Even better, you can reuse them or bring reusable totes to go shopping! DO NOT place plastic bags in our curbside carts, they jam up the machinery that sort our recyclables.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '10');
+                });
+                break;
+
+            case '10':
+                // Q4
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%204.png" alt="Batteries, electronics, and other small appliances">
+                <p class="text-center mt-3"><strong>Q:</strong> True or false? Batteries, electronics, and other small appliances go in your recycling cart.</p>
+                </div>
+                <div class="container text-center mb-2">
+                <cod-button data-id="q1-true" data-label="True" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-false" data-label="False" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                <p class="text-center">4/12</p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            if(e.target.getAttribute('data-label') == 'False'){
+                                rc.answers.push('pass');
+                                rc.setAttribute('data-step', '11');
+                            }else{
+                                rc.setAttribute('data-step', '12');
+                            }
+                        }
+                    });
+                })
+                break;
+
+            case '11':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%204.png" alt="Batteries, electronics, and other small appliances">
+                <h2 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="medium"></cod-icon> Correct!</h2>
+                <p class="text-center">Note: Batteries, electronics, and other small appliances should be dropped off at the Household Hazardous Waste Facility. Recycling these items is dangerous – batteries can cause fires in collection trucks and recycling facilities!<br>
+
+                Visit the Household Hazardous Waste Facility at 2000 E Ferry St. Open on Thursdays from 7:30am – 2pm, or every fourth Saturday from 8am – 2pm.  </p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '13');
+                });
+                break;
+
+            case '12':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%204.png" alt="Batteries, electronics, and other small appliances">
+                <h2 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="medium"></cod-icon> Opps! It's false</h2>
+                <p class="text-center">Note: Batteries, electronics, and other small appliances should be dropped off at the Household Hazardous Waste Facility. Recycling these items is dangerous – batteries can cause fires in collection trucks and recycling facilities!<br>
+
+                Visit the Household Hazardous Waste Facility at 2000 E Ferry St. Open on Thursdays from 7:30am – 2pm, or every fourth Saturday from 8am – 2pm.  </p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '13');
+                });
+                break;
+
+            case '13':
+                // Q5
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%205.png" alt="Water bottle, shampoo bottle, yogurt cup, detergent, bottle, plastic container">
+                <p class="text-center mt-3"><strong>Q:</strong> Which of the following plastic items are recyclable?</p>
+                </div>
+                <div class="container text-center mb-2">
+                <div class="mb-1">
+                <cod-button data-id="q5-water" data-label="Water bottles and other beverage bottles" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div class="mb-1">
+                <cod-button data-id="q5-yogurt" data-label="Yogurt cups" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div class="mb-1">
+                <cod-button data-id="q5-shampoo" data-label="Shampoo bottles" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div class="mb-1">
+                <cod-button data-id="q5-detergent" data-label="Detergent bottles" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div class="mb-1">
+                <cod-button data-id="q5-all" data-label="All of the above" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                </div>
+                <p class="text-center">5/12</p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            if(e.target.getAttribute('data-label') == 'All of the above'){
+                                rc.answers.push('pass');
+                                rc.setAttribute('data-step', '14');
+                            }else{
+                                rc.setAttribute('data-step', '15');
+                            }
+                        }
+                    });
+                })
+                break;
+
+            case '14':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%205.png" alt="Water bottle, shampoo bottle, yogurt cup, detergent, bottle, plastic container">
+                <h2 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="medium"></cod-icon> Correct!</h2>
+                <p class="text-center">Notes: Hard plastic bottles and jugs are recyclable. Please be sure everything is <strong>empty and clean</strong>. Bottle caps and labels should stay on.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '16');
+                });
+                break;
+
+            case '15':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%205.png" alt="Water bottle, shampoo bottle, yogurt cup, detergent, bottle, plastic container">
+                <h2 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="medium"></cod-icon> Opps! It's all of the above</h2>
+                <p class="text-center">Notes: Hard plastic bottles and jugs are recyclable. Please be sure everything is <strong>empty and clean</strong>. Bottle caps and labels should stay on.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '16');
+                });
+                break;
+
+            case '16':
+                // Q6
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%206.png" alt="garden hose, wire hangers and string lights">
+                <p class="text-center mt-3"><strong>Q:</strong> True or false? Old garden hoses, wire hangers, and string lights should be put in your recycling cart.</p>
+                </div>
+                <div class="container text-center mb-2">
+                <cod-button data-id="q1-true" data-label="True" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-false" data-label="False" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                <p class="text-center">6/12</p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            if(e.target.getAttribute('data-label') == 'False'){
+                                rc.answers.push('pass');
+                                rc.setAttribute('data-step', '17');
+                            }else{
+                                rc.setAttribute('data-step', '18');
+                            }
+                        }
+                    });
+                })
+                break;
+
+            case '17':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%206.png" alt="garden hose, wire hangers and string lights">
+                <h2 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="medium"></cod-icon> Correct!</h2>
+                <p class="text-center">Note: Garden hoses, electric cords, string lights, and other wire items should NOT be in your recycling cart. These items get tangled up in the recycling sorting equipment.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '19');
+                });
+                break;
+
+            case '18':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%206.png" alt="garden hose, wire hangers and string lights">
+                <h2 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="medium"></cod-icon> Opps! It's false</h2>
+                <p class="text-center">Note: Garden hoses, electric cords, string lights, and other wire items should NOT be in your recycling cart. These items get tangled up in the recycling sorting equipment.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '19');
+                });
+                break;
+
+            case '19':
+                // Q7
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%207.png" alt="glass bottles">
+                <p class="text-center mt-3"><strong>Q:</strong> True or false? Any color glass bottle can be recycled.</p>
+                </div>
+                <div class="container text-center mb-2">
+                <cod-button data-id="q1-true" data-label="True" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-false" data-label="False" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                <p class="text-center">7/12</p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            if(e.target.getAttribute('data-label') == 'True'){
+                                rc.answers.push('pass');
+                                rc.setAttribute('data-step', '20');
+                            }else{
+                                rc.setAttribute('data-step', '21');
+                            }
+                        }
+                    });
+                })
+                break;
+
+            case '20':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%207.png" alt="glass bottles">
+                <h2 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="medium"></cod-icon> Correct!</h2>
+                <p class="text-center">Note: All <strong>empty and clean</strong> glass bottles and jars can be placed in your recycling cart, no matter what color glass. Please DO NOT recycle other glass items such as windows, pyrex, ceramics, or kitchenware like cups.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '22');
+                });
+                break;
+
+            case '21':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%207.png" alt="glass bottles">
+                <h2 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="medium"></cod-icon> Opps! It's true</h2>
+                <p class="text-center">Note: All <strong>empty and clean</strong> glass bottles and jars can be placed in your recycling cart, no matter what color glass. Please DO NOT recycle other glass items such as windows, pyrex, ceramics, or kitchenware like cups.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '22');
+                });
+                break;
+
+            case '22':
+                // Q8
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%208.png" alt="napkins, straws, and plastic utensils">
+                <p class="text-center mt-3"><strong>Q:</strong> How should you dispose of napkins, straws, and plastic utensils?</p>
+                </div>
+                <div class="container text-center mb-2">
+                <div class="mb-1">
+                <cod-button data-id="q5-recycling" data-label="Recycling cart" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div class="mb-1">
+                <cod-button data-id="q5-trash" data-label="Trash cart" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div class="mb-1">
+                <cod-button data-id="q5-throw" data-label="Throw them out the window of your car " data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                </div>
+                <p class="text-center">8/12</p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            if(e.target.getAttribute('data-label') == 'Trash cart'){
+                                rc.answers.push('pass');
+                                rc.setAttribute('data-step', '23');
+                            }else{
+                                rc.setAttribute('data-step', '24');
+                            }
+                        }
+                    });
+                })
+                break;
+
+            case '23':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%208.png" alt="napkins, straws, and plastic utensils">
+                <h2 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="medium"></cod-icon> Correct!</h2>
+                <p class="text-center">Note: Disposable utensils and straws are garbage. We are unable to recycle items that are smaller than two inches in diameter. Napkins, paper towels, and tissue (whether they are clean or dirty) also cannot be recycled because the fibers are too short – but you can compost these paper items! <br>
+
+                PRO TIP: when ordering take-out, ask for “no utensils” if you don’t need them, and please don’t be a litter bug!</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '25');
+                });
+                break;
+
+            case '24':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%208.png" alt="napkins, straws, and plastic utensils">
+                <h2 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="medium"></cod-icon> Opps! It's trash cart</h2>
+                <p class="text-center">Note: Disposable utensils and straws are garbage. We are unable to recycle items that are smaller than two inches in diameter. Napkins, paper towels, and tissue (whether they are clean or dirty) also cannot be recycled because the fibers are too short – but you can compost these paper items! <br>
+
+                PRO TIP: when ordering take-out, ask for “no utensils” if you don’t need them, and please don’t be a litter bug!</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '25');
+                });
+                break;
+
+            case '25':
+                // Q9
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%209.png" alt="Clothes, rags, and other textiles">
+                <p class="text-center mt-3"><strong>Q:</strong> True or false? Clothes, rags, and other textiles can be placed in your curbside recycling cart.</p>
+                </div>
+                <div class="container text-center mb-2">
+                <cod-button data-id="q1-true" data-label="True" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-false" data-label="False" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                <p class="text-center">9/12</p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            if(e.target.getAttribute('data-label') == 'False'){
+                                rc.answers.push('pass');
+                                rc.setAttribute('data-step', '26');
+                            }else{
+                                rc.setAttribute('data-step', '27');
+                            }
+                        }
+                    });
+                })
+                break;
+
+            case '26':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%209.png" alt="Clothes, rags, and other textiles">
+                <h2 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="medium"></cod-icon> Correct!</h2>
+                <p class="text-center">Note: Clothes, rags, shoes, and other textiles cannot be recycled curbside. We recommend finding a local donation center for reusable items.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '28');
+                });
+                break;
+
+            case '27':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%209.png" alt="Clothes, rags, and other textiles">
+                <h2 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="medium"></cod-icon> Opps! It's false</h2>
+                <p class="text-center">Note: Clothes, rags, shoes, and other textiles cannot be recycled curbside. We recommend finding a local donation center for reusable items.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '28');
+                });
+                break;
+
+            case '28':
+                // 10
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%2010.png" alt="pop cans, tuna can and aluminum foil">
+                <p class="text-center mt-3"><strong>Q:</strong> Which of the following can be placed in your recycling cart?</p>
+                </div>
+                <div class="container text-center mb-2">
+                <div class="mb-1">
+                <cod-button data-id="q5-soup" data-label="Soup cans" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div class="mb-1">
+                <cod-button data-id="q5-pop" data-label="Pop cans" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div class="mb-1">
+                <cod-button data-id="q5-foil" data-label="Aluminum foil" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div class="mb-1">
+                <cod-button data-id="q5-all" data-label="All of the above" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                </div>
+                <p class="text-center">10/12</p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            if(e.target.getAttribute('data-label') == 'All of the above'){
+                                rc.answers.push('pass');
+                                rc.setAttribute('data-step', '29');
+                            }else{
+                                rc.setAttribute('data-step', '30');
+                            }
+                        }
+                    });
+                })
+                break;
+
+            case '29':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%2010.png" alt="pop cans, tuna can and aluminum foil">
+                <h2 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="medium"></cod-icon> Correct!</h2>
+                <p class="text-center">Note: Please <strong>empty and clean</strong> all containers before recycling them. Labels do not need to be removed.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '31');
+                });
+                break;
+
+            case '30':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%2010.png" alt="pop cans, tuna can and aluminum foil">
+                <h2 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="medium"></cod-icon> Opps! It's all of the above</h2>
+                <p class="text-center">Note: Please <strong>empty and clean</strong> all containers before recycling them. Labels do not need to be removed. </p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '31');
+                });
+                break;
+
+            case '31':
+                // Q11
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%2011.png" alt="dirty containers and full pop bottle">
+                <p class="text-center mt-3"><strong>Q:</strong> True or false? These items are ready for recycling.</p>
+                </div>
+                <div class="container text-center mb-2">
+                <cod-button data-id="q1-true" data-label="True" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-false" data-label="False" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                <p class="text-center">11/12</p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            if(e.target.getAttribute('data-label') == 'False'){
+                                rc.answers.push('pass');
+                                rc.setAttribute('data-step', '32');
+                            }else{
+                                rc.setAttribute('data-step', '33');
+                            }
+                        }
+                    });
+                })
+                break;
+
+            case '32':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%2011.png" alt="dirty containers and full pop bottle">
+                <h2 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="medium"></cod-icon> Correct!</h2>
+                <p class="text-center">Note: Please <strong>empty and rinse</strong> all containers before recycling them. You do not need to remove labels. Foods and liquids get our recycling carts dirty and stinky, and it contaminates other recyclable items. PRO TIP: use a spatula or used napkin to remove sticky food from containers – its quick, easy, and saves water.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '34');
+                });
+                break;
+
+            case '33':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%2011.png" alt="dirty containers and full pop bottle">
+                <h2 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="medium"></cod-icon> Opps! It's false</h2>
+                <p class="text-center">Note: Please <strong>empty and rinse</strong> all containers before recycling them. You do not need to remove labels. Foods and liquids get our recycling carts dirty and stinky, and it contaminates other recyclable items. PRO TIP: use a spatula or used napkin to remove sticky food from containers – its quick, easy, and saves water.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    rc.setAttribute('data-step', '34');
+                });
+                break;
+
+            case '34':
+                // Q12
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%2012.png" alt="coffee cups, envelopes, juice carton and magazines">
+                <p class="text-center mt-3"><strong>Q:</strong> Which of the following plastic items are recyclable?</p>
+                </div>
+                <div class="container text-center mb-2">
+                <div class="mb-1">
+                <cod-button data-id="q5-coffee" data-label="Coffee cups" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div class="mb-1">
+                <cod-button data-id="q5-envelopes" data-label="Envelopes with plastic windows" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div class="mb-1">
+                <cod-button data-id="q5-juice" data-label="Orange juice carton" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div class="mb-1">
+                <cod-button data-id="q5-magazines" data-label="Magazines" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                <div class="mb-1">
+                <cod-button data-id="q5-all" data-label="All of the above" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                </div>
+                <p class="text-center">12/12</p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            if(e.target.getAttribute('data-label') == 'All of the above'){
+                                rc.answers.push('pass');
+                                rc.setAttribute('data-step', '35');
+                            }else{
+                                rc.setAttribute('data-step', '36');
+                            }
+                        }
+                    });
+                })
+                break;
+
+            case '35':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%2012.png" alt="coffee cups, envelopes, juice carton and magazines">
+                <h2 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="medium"></cod-icon> Correct!</h2>
+                <p class="text-center">Note: Please <strong>empty and clean</strong> all containers before recycling them. Labels do not need to be removed.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    switch (true) {
+                        case rc.answers.length < 6:
+                            rc.setAttribute('data-step', '37');
+                            break;
+
+                        case rc.answers.length > 5 && rc.answers.length < 9:
+                            rc.setAttribute('data-step', '38');
+                            break;
+
+                        case rc.answers.length > 7 && rc.answers.length < 11:
+                            rc.setAttribute('data-step', '39');
+                            break;
+                    
+                        default:
+                            rc.setAttribute('data-step', '40');
+                            break;
+                    }
+                });
+                break;
+
+            case '36':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%2012.png" alt="coffee cups, envelopes, juice carton and magazines">
+                <h2 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="medium"></cod-icon> Opps! It's all of the above</h2>
+                <p class="text-center">Note: Please <strong>empty and clean</strong> all containers before recycling them. Labels do not need to be removed. </p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="q1-next" data-label="Next" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                `;
+                shadow.querySelector('cod-button').addEventListener('click', (e)=>{
+                    switch (true) {
+                        case rc.answers.length < 6:
+                            rc.setAttribute('data-step', '37');
+                            break;
+
+                        case rc.answers.length > 5 && rc.answers.length < 9:
+                            rc.setAttribute('data-step', '38');
+                            break;
+
+                        case rc.answers.length > 7 && rc.answers.length < 11:
+                            rc.setAttribute('data-step', '39');
+                            break;
+                    
+                        default:
+                            rc.setAttribute('data-step', '40');
+                            break;
+                    }
+                });
+                break;
+
+            case '37':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <h2 class="text-center pass-q mt-2">Whoops!</h2>
+                <p class="text-center">Your score was ${rc.answers.length}/12</p>
+                <p class="text-center">Looks like there is still a lot to learn about recycling. <strong>Please retake the recycling quiz to receive your free container.</strong> For additional information, you can download the Recycling Guide below.</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="video-btn" data-label="Rewatch Video" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                </div>
+                </div>
+                <p class="text-center">For additional information, you can download the Recycling Guide below.</p>
+                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">VIEW OUR CURBSIDE RECYCLING GUIDE</a><br><br>
+
+                <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs_SP_092322.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            rc.answers = [];
+                            if(e.target.getAttribute('data-label') == 'Retake Quiz'){
+                                rc.setAttribute('data-step', '1');
+                            }else{
+                                rc.setAttribute('data-step', '0');
+                            }
+                        }
+                    });
+                });
+                break;
+
+            case '38':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <h2 class="text-center pass-q mt-2">Not too shabby!</h2>
+                <p class="text-center">Your score was ${rc.answers.length}/12</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-primary="true" data-label="Request FREE Cart" data-size="medium" data-background-color="color-1" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="http://detroitmi.gov/PublicWorks/recyclingContainerForm" data-id="free-cart"></cod-button>
+                </div>
+                </div>
+                <p class="text-center">For additional information, you can download the Recycling Guide below.</p>
+                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">VIEW OUR CURBSIDE RECYCLING GUIDE</a><br><br>
+
+                <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs_SP_092322.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            rc.answers = [];
+                            if(e.target.getAttribute('data-label') == 'Retake Quiz'){
+                                rc.setAttribute('data-step', '1');
+                            }
+                        }
+                    });
+                });
+                break;
+
+            case '39':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <h2 class="text-center pass-q mt-2">Great work!</h2>
+                <p class="text-center">Your score was ${rc.answers.length}/12</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-primary="true" data-label="Request FREE Cart" data-size="medium" data-background-color="color-1" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="http://detroitmi.gov/PublicWorks/recyclingContainerForm" data-id="free-cart"></cod-button>
+                </div>
+                </div>
+                <p class="text-center">For additional information, you can download the Recycling Guide below.</p>
+                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">VIEW OUR CURBSIDE RECYCLING GUIDE</a><br><br>
+
+                <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs_SP_092322.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            rc.answers = [];
+                            if(e.target.getAttribute('data-label') == 'Retake Quiz'){
+                                rc.setAttribute('data-step', '1');
+                            }
+                        }
+                    });
+                });
+                break;
+
+            case '40':
+                this.appContent.innerHTML = `
+                <div class="row">
+                <h2 class="text-center pass-q mt-2">You’re a recycling expert!</h2>
+                <p class="text-center">Your score was ${rc.answers.length}/12</p>
+                </div>
+                <div class="container text-center">
+                <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-primary="true" data-label="Request FREE Cart" data-size="medium" data-background-color="color-1" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="http://detroitmi.gov/PublicWorks/recyclingContainerForm" data-id="free-cart"></cod-button>
+                </div>
+                </div>
+                <p class="text-center">For additional information, you can download the Recycling Guide below.</p>
+                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">VIEW OUR CURBSIDE RECYCLING GUIDE</a><br><br>
+
+                <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs_SP_092322.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
+                `;
+                qBtns = shadow.querySelectorAll('cod-button');
+                qBtns.forEach((btn)=>{
+                    btn.addEventListener('click', (e) => {
+                        if(e.target.getAttribute('data-label') != null){
+                            rc.answers = [];
+                            if(e.target.getAttribute('data-label') == 'Retake Quiz'){
+                                rc.setAttribute('data-step', '1');
+                            }
+                        }
+                    });
+                });
                 break;
         
             default:
