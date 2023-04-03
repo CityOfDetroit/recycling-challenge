@@ -1,12 +1,12 @@
-# Local Services Lookup [![Build Status](https://app.travis-ci.com/CityOfDetroit/local-services-lookup.svg?branch=dev)](https://travis-ci.com/CityOfDetroit/local-services-lookup)
-Simple app to lookup city services based on a location
+# Recycling Quiz [![Build Status](https://app.travis-ci.com/CityOfDetroit/recycling-challenge.svg?branch=2.0)](https://travis-ci.com/CityOfDetroit/recycling-challenge)
+Short Recycling trivia challenge to teach Detroit residents about how recycling is done in their city.
 
 ## Getting Started
 
 This project was created using:
  - [Webpack](https://webpack.js.org/) as a web application bundler.
  - [Yarn](https://classic.yarnpkg.com/en/) to manage project dependencies.
- - [MapLibre](https://maplibre.org/) for map framework.
+ - [COD-Design-System](https://jedgar1mx.github.io/COD-Design-System/) for UI components.
  - [Cypress](https://www.cypress.io/) for testing.
  - [TravisCI](https://www.travis-ci.com/) for continuous integration.
 
@@ -14,7 +14,7 @@ This project was created using:
 
 1. Download the repo.
     ```
-    $ git clone git@github.com:CityOfDetroit/local-services-lookup.git
+    $ git clone git@github.com:CityOfDetroit/recycling-challenge.git
     ```
 2. Install node dependencies.
 
@@ -38,5 +38,4 @@ This project was created using:
     ```
 ## Resources
 
-* SLACK - #webteam
-* GitHub - https://github.com/CityOfDetroit/local-services-lookup
+* GitHub - https://github.com/CityOfDetroit/recycling-challenge
