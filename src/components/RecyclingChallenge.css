@@ -13,8 +13,8 @@
     font-family: var(--font-family);
 }
 .accordion-header{
-    background-color: #004445;
-    color: #fff;
+    background-color: var(--color-3);
+    color: var(--color-dark);
 }
 .pass-q{
     color: var(--color-1);
@@ -22,4 +22,9 @@
 
 .fail-q{
     color: var(--color-4);
+}
+
+.logo img{
+    width: 12em;
+    margin: auto;
 }
