@@ -48,20 +48,24 @@ export default class RecyclingChallenge extends HTMLElement {
                         <img src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-05/DetRecycles_Logo_050522.jpg" alt="Detroit Recycles">
                     </div>
                     <h2 class="text-center">Detroit Recycles and you can too!</h2>
-                    <p class="text-center">Take this quiz to sign up for a FREE recycling cart.<br> 
-                    OR call XXX-XXX-XXXX to sign up over the phone</p>
+                    <p class="text-center">Take this quiz to sign up for a FREE recycling cart.</p>
                     <div class="accordion mb-3" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                             CLICK HERE TO LEARN ABOUT RECYCLING AND START THE QUIZ 
                             </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
+                            <div class="alert alert-danger" role="alert">
+                            <p class="text-center"><em><strong>Single family homes</strong> and homes with <strong>four or less units</strong> are eligible for the curbside recycling program.</em></p>
+
+                            <p class="text-center">If you represent a business or live in a multifamily building with five or more units, visit our <a href="https://detroitmi.gov/departments/department-public-works/refuse-collection/detroit-recycles/commercial-recycling-program" target="_blank">Detroit’s Commercial Recycling Program page.</a></p>
+                            </div>
                             <div class="row">
                             <div class="m-auto" style="width:560px">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/uF4gUeZgorU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/uF4gUeZgorU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                             </div>
                             <div class="row">
@@ -82,10 +86,6 @@ export default class RecyclingChallenge extends HTMLElement {
                     <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
 
                     <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs_SP_092322.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
-                    
-                    <p class="text-center"><em><strong>Single family homes</strong> and homes with <strong>four or less units</strong> are eligible for the curbside recycling program.</em></p>
-
-                    <p class="text-center">If you represent a business or live in a multifamily building with five or more units, visit our <a href="https://detroitmi.gov/departments/department-public-works/refuse-collection/detroit-recycles/commercial-recycling-program" target="_blank">Detroit’s Commercial Recycling Program page.</p>
                 `;
                 shadow.querySelector('button.accordion-button').addEventListener('click', (e) => {
                     let show = false;
@@ -260,7 +260,7 @@ export default class RecyclingChallenge extends HTMLElement {
             case '5':
                 this.appContent.innerHTML = `
                 <div class="row">
-                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-05/Question%201.png" alt="plastic bag">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-05/Question%201_0.png" alt="plastic bag">
                 <p class="text-center mt-3"><strong>Q: True or false? Recyclables should be loose in your cart and not in a plastic bag.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
@@ -287,7 +287,7 @@ export default class RecyclingChallenge extends HTMLElement {
             case '6':
                 this.appContent.innerHTML = `
                 <div class="row">
-                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-05/Question%201.png" alt="plastic bag">
+                <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-05/Question%201_0.png" alt="plastic bag">
                 <p class="text-center mt-3"><strong>Q: True or false? Recyclables should be loose in your cart and not in a plastic bag.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
@@ -1157,7 +1157,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 this.appContent.innerHTML = `
                 <div class="row">
                 <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%2012.png" alt="coffee cups, envelopes, juice carton and magazines">
-                <p class="text-center mt-3"><strong>Q:</strong> Which of the following plastic items are recyclable?</p>
+                <p class="text-center mt-3"><strong>Q:</strong> Which of the following paper items are recyclable?</p>
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
@@ -1198,7 +1198,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 this.appContent.innerHTML = `
                 <div class="row">
                 <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%2012.png" alt="coffee cups, envelopes, juice carton and magazines">
-                <p class="text-center mt-3"><strong>Q: Which of the following plastic items are recyclable?</strong></p>
+                <p class="text-center mt-3"><strong>Q: Which of the following paper items are recyclable?</strong></p>
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
@@ -1259,7 +1259,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 this.appContent.innerHTML = `
                 <div class="row">
                 <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%2012.png" alt="coffee cups, envelopes, juice carton and magazines">
-                <p class="text-center mt-3"><strong>Q: Which of the following plastic items are recyclable?</strong></p>
+                <p class="text-center mt-3"><strong>Q: Which of the following paper items are recyclable?</strong></p>
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
@@ -1328,12 +1328,14 @@ export default class RecyclingChallenge extends HTMLElement {
                 <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="color-1" data-primary="true" data-img-alt="" data-icon=""></cod-button>
                 </div>
                 </div>
-                <p class="text-center">For additional information, you can download the Recycling Guide below.</p>
-                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">VIEW OUR CURBSIDE RECYCLING GUIDE</a><br><br>
+                <div class="success">
+                <p class="text-center fs-3">Still have questions?</p>
+                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
 
                 <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs_SP_092322.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
-                <p class="text-center">Visit <a href="http://DetroitRecycles.org" target="_blank" >DetroitRecycles.org</a>
-                <br>for more information and resources! </p>
+
+                <p class="text-center">or go to <a class="fs-4" href="http://DetroitRecycles.org" target="_blank" >DetroitRecycles.org</a></p>
+                </div>
                 `;
                 qBtns = shadow.querySelectorAll('cod-button');
                 qBtns.forEach((btn)=>{
@@ -1366,13 +1368,17 @@ export default class RecyclingChallenge extends HTMLElement {
                     <li>Set out your blue recycling cart every other week, the same week as bulk and yard waste.</li>
                     <li>Check out the <a href="https://detroitmi.gov/webapp/find-your-waste-pickup-schedule" target="_blank">Find Your Waste Pickup Schedule tool</a> to confirm your next pickup date and sign up for text reminders.</li>
                 </ul>
-                <p class="text-center">For additional information, you can download the Recycling Guide below.</p>
-                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">VIEW OUR CURBSIDE RECYCLING GUIDE</a><br><br>
+                <div class="d-flex">
+                <img class="img-fluid" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2021-01/Recycling.jpg" alt="recycling containers"></img>
+                </div>
+                <div class="success">
+                <p class="text-center fs-3">Still have questions?</p>
+                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
 
                 <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs_SP_092322.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
 
-                <p class="text-center">Visit <a href="http://DetroitRecycles.org" target="_blank" >DetroitRecycles.org</a>
-                <br>for more information and resources! </p>
+                <p class="text-center">or go to <a class="fs-4" href="http://DetroitRecycles.org" target="_blank" >DetroitRecycles.org</a></p>
+                </div>
                 `;
                 qBtns = shadow.querySelectorAll('cod-button');
                 qBtns.forEach((btn)=>{
@@ -1403,13 +1409,17 @@ export default class RecyclingChallenge extends HTMLElement {
                     <li>Set out your blue recycling cart every other week, the same week as bulk and yard waste.</li>
                     <li>Check out the <a href="https://detroitmi.gov/webapp/find-your-waste-pickup-schedule" target="_blank">Find Your Waste Pickup Schedule tool</a> to confirm your next pickup date and sign up for text reminders.</li>
                 </ul>
-                <p class="text-center">For additional information, you can download the Recycling Guide below.</p>
-                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">VIEW OUR CURBSIDE RECYCLING GUIDE</a><br><br>
+                <div class="d-flex">
+                <img class="img-fluid" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2021-01/Recycling.jpg" alt="recycling containers"></img>
+                </div>
+                <div class="success">
+                <p class="text-center fs-3">Still have questions?</p>
+                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
 
                 <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs_SP_092322.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
 
-                <p class="text-center">Visit <a href="http://DetroitRecycles.org" target="_blank" >DetroitRecycles.org</a>
-                <br>for more information and resources! </p>
+                <p class="text-center">or go to <a class="fs-4" href="http://DetroitRecycles.org" target="_blank" >DetroitRecycles.org</a></p>
+                </div>
                 `;
                 qBtns = shadow.querySelectorAll('cod-button');
                 qBtns.forEach((btn)=>{
@@ -1440,13 +1450,17 @@ export default class RecyclingChallenge extends HTMLElement {
                     <li>Set out your blue recycling cart every other week, the same week as bulk and yard waste.</li>
                     <li>Check out the <a href="https://detroitmi.gov/webapp/find-your-waste-pickup-schedule" target="_blank">Find Your Waste Pickup Schedule tool</a> to confirm your next pickup date and sign up for text reminders.</li>
                 </ul>
-                <p class="text-center">For additional information, you can download the Recycling Guide below.</p>
-                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">VIEW OUR CURBSIDE RECYCLING GUIDE</a><br><br>
+                <div class="d-flex">
+                <img class="img-fluid" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2021-01/Recycling.jpg" alt="recycling containers"></img>
+                </div>
+                <div class="success">
+                <p class="text-center fs-3">Still have questions?</p>
+                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
 
                 <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs_SP_092322.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
 
-                <p class="text-center">Visit <a href="http://DetroitRecycles.org" target="_blank" >DetroitRecycles.org</a>
-                <br>for more information and resources! </p>
+                <p class="text-center">or go to <a class="fs-4" href="http://DetroitRecycles.org" target="_blank" >DetroitRecycles.org</a></p>
+                </div>
                 `;
                 qBtns = shadow.querySelectorAll('cod-button');
                 qBtns.forEach((btn)=>{

@@ -28,3 +28,14 @@
     width: 12em;
     margin: auto;
 }
+
+.alert-danger{
+    background-color: var(--color-1);
+    color: var(--color-light);
+}
+
+.success{
+    background-color: var(--color-2);
+    color: var(--color-dark);
+    padding: 1em;
+}
