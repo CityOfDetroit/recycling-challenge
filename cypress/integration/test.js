@@ -16,6 +16,6 @@ describe('Load start screen', () => {
       cy.get('recycling-challenge')
       .get('cod-button').click()
       cy.get('recycling-challenge')
-      .contains('Q: True or false? Recyclables should be loose in your cart and not in a plastic bag.')
+      .contains('Q: Which of the following plastic items are recyclable?')
     })
 })
