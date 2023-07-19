@@ -1326,7 +1326,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center">Looks like there is still a lot to learn about recycling.
                 <br><strong>Please retake the recycling quiz to receive your free container.</strong></p>
                 <div class="container text-center mb-2">
-                <cod-button data-id="video-btn" data-label="Rewatch Video" data-background-color="color-3" data-primary="true" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="video-btn" data-label="Rewatch Video" data-background-color="warning" data-primary="true" data-img-alt="" data-icon=""></cod-button>
                 <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="primary" data-primary="true" data-img-alt="" data-icon=""></cod-button>
                 </div>
                 </div>
@@ -1361,7 +1361,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center">Your score was ${rc.answers.length}/12</p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-primary="true" data-label="Request FREE Cart" data-size="large" data-background-color="color-3" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="http://detroitmi.gov/PublicWorks/recyclingContainerForm" data-id="free-cart"></cod-button>
+                <cod-button data-primary="true" data-label="Request FREE Cart" data-size="large" data-background-color="warning" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="http://detroitmi.gov/PublicWorks/recyclingContainerForm" data-id="free-cart"></cod-button>
                 <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="primary" data-primary="true" data-img-alt="" data-icon=""></cod-button>
                 </div>
                 </div>
@@ -1402,7 +1402,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center">Your score was ${rc.answers.length}/12</p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-primary="true" data-label="Request FREE Cart" data-size="large" data-background-color="color-3" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="http://detroitmi.gov/PublicWorks/recyclingContainerForm" data-id="free-cart"></cod-button>
+                <cod-button data-primary="true" data-label="Request FREE Cart" data-size="large" data-background-color="warning" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="http://detroitmi.gov/PublicWorks/recyclingContainerForm" data-id="free-cart"></cod-button>
                 <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="primary" data-primary="true" data-img-alt="" data-icon=""></cod-button>
                 </div>
                 </div>
@@ -1443,7 +1443,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center">Your score was ${rc.answers.length}/12</p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-primary="true" data-label="Request FREE Cart" data-size="large" data-background-color="color-3" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="http://detroitmi.gov/PublicWorks/recyclingContainerForm" data-id="free-cart"></cod-button>
+                <cod-button data-primary="true" data-label="Request FREE Cart" data-size="large" data-background-color="warning" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="http://detroitmi.gov/PublicWorks/recyclingContainerForm" data-id="free-cart"></cod-button>
                 <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="primary" data-primary="true" data-img-alt="" data-icon=""></cod-button>
                 </div>
                 </div>
