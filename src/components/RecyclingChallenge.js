@@ -1361,7 +1361,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center">Your score was ${rc.answers.length}/12</p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-label="Request FREE Cart" data-size="large" data-background-color="warning" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="https://detroitrecycles.qscend.com/311/request/add?typeId=241" data-id="free-cart"></cod-button>
+                <cod-button data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-label="Request FREE Cart" data-size="large" data-background-color="warning" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="https://seeclickfix.com/web_portal/HqbyN8hY9UGyuhFwxK7LaZeZ/report/category/53351/location" data-id="free-cart"></cod-button>
                 <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
                 </div>
                 </div>
@@ -1402,7 +1402,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center">Your score was ${rc.answers.length}/12</p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-label="Request FREE Cart" data-size="large" data-background-color="warning" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="https://detroitrecycles.qscend.com/311/request/add?typeId=241" data-id="free-cart"></cod-button>
+                <cod-button data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-label="Request FREE Cart" data-size="large" data-background-color="warning" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="https://seeclickfix.com/web_portal/HqbyN8hY9UGyuhFwxK7LaZeZ/report/category/53351/location" data-id="free-cart"></cod-button>
                 <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
                 </div>
                 </div>
@@ -1443,7 +1443,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center">Your score was ${rc.answers.length}/12</p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-label="Request FREE Cart" data-size="large" data-background-color="warning" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="https://detroitrecycles.qscend.com/311/request/add?typeId=241" data-id="free-cart"></cod-button>
+                <cod-button data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-label="Request FREE Cart" data-size="large" data-background-color="warning" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="https://seeclickfix.com/web_portal/HqbyN8hY9UGyuhFwxK7LaZeZ/report/category/53351/location" data-id="free-cart"></cod-button>
                 <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
                 </div>
                 </div>
