@@ -79,8 +79,7 @@ export default class RecyclingChallenge extends HTMLElement {
                     </div>
                     <p class="text-center"><strong>OR</strong><br><br>
                     <strong>Call to sign up over the phone:</strong><br>
-                    Green Living Science - (313) 871-4000 ext 3.<br>
-                    Zero Waste Detroit - (313) 986-2990 
+                    Green Living Science - (313) 871-4000 ext 3.
                     </p>
                     <p class="text-center"><strong>For more information about recycling: </p>
                     <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
