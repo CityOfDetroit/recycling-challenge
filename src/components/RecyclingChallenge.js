@@ -82,9 +82,9 @@ export default class RecyclingChallenge extends HTMLElement {
                     Green Living Science - (313) 871-4000 ext 3.
                     </p>
                     <p class="text-center"><strong>For more information about recycling: </p>
-                    <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
+                    <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2024-12/Recycling_FAQs2_112024.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
 
-                    <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs_SP_092322.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
+                    <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2024-12/Recycling_FAQs2_111424_ES.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
                 `;
                 shadow.querySelector('button.accordion-button').addEventListener('click', (e) => {
                     let show = false;
@@ -1331,9 +1331,9 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="success">
                 <p class="text-center fs-3">Still have questions?</p>
-                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
+                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2024-12/Recycling_FAQs2_112024.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
 
-                <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs_SP_092322.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
+                <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2024-12/Recycling_FAQs2_111424_ES.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
 
                 <p class="text-center">or go to <a class="fs-4" href="http://DetroitRecycles.org" target="_blank" >DetroitRecycles.org</a></p>
                 </div>
@@ -1374,9 +1374,9 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="success">
                 <p class="text-center fs-3">Still have questions?</p>
-                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
+                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2024-12/Recycling_FAQs2_112024.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
 
-                <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs_SP_092322.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
+                <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2024-12/Recycling_FAQs2_111424_ES.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
 
                 <p class="text-center">or go to <a class="fs-4" href="http://DetroitRecycles.org" target="_blank" >DetroitRecycles.org</a></p>
                 </div>
@@ -1415,9 +1415,9 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="success">
                 <p class="text-center fs-3">Still have questions?</p>
-                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
+                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2024-12/Recycling_FAQs2_112024.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
 
-                <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs_SP_092322.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
+                <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2024-12/Recycling_FAQs2_111424_ES.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
 
                 <p class="text-center">or go to <a class="fs-4" href="http://DetroitRecycles.org" target="_blank" >DetroitRecycles.org</a></p>
                 </div>
@@ -1456,9 +1456,9 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="success">
                 <p class="text-center fs-3">Still have questions?</p>
-                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs1_091422.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
+                <p class="text-center"><strong><a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2024-12/Recycling_FAQs2_112024.pdf" target="_blank">DOWNLOAD OUR CURBSIDE RECYCLING GUIDE</a><br><br>
 
-                <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-02/Recycling_FAQs_SP_092322.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
+                <a href="https://detroitmi.gov/sites/detroitmi.localhost/files/2024-12/Recycling_FAQs2_111424_ES.pdf" target="_blank">VEA NUESTRA GUÍA DE RECICLAJE EN LA ACERA</a></strong></p>
 
                 <p class="text-center">or go to <a class="fs-4" href="http://DetroitRecycles.org" target="_blank" >DetroitRecycles.org</a></p>
                 </div>
