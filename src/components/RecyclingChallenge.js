@@ -70,7 +70,7 @@ export default class RecyclingChallenge extends HTMLElement {
                             </div>
                             <div class="row">
                             <div class="m-auto" style="width:9.5em">
-                            <cod-button data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-disable="undefined" data-label="Start Quiz" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-shape="undefined" data-aria-label="" data-background-color="warning"></cod-button>
+                            <cod-button size="large" variant="warning">Start Quiz</cod-button>
                             </div>
                             </div>
                             </div>
@@ -113,19 +113,19 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q5-water" data-label="Water bottles and other beverage bottles" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-water" data-label="Water bottles and other beverage bottles" variant="primary" size="large">Water bottles and other beverage bottles</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-yogurt" data-label="Yogurt cups" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-yogurt" data-label="Yogurt cups" size="large" variant="primary">Yogurt cups</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-shampoo" data-label="Shampoo bottles" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-shampoo" data-label="Shampoo bottles" size="large" variant="primary">Shampoo bottles</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-detergent" data-label="Detergent bottles" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-detergent" data-label="Detergent bottles" size="large" variant="primary">Detergent bottles</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-all" data-label="All of the above" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-all" data-label="All of the above" size="large" variant="primary">All of the above</cod-button>
                 </div>
                 </div>
                 </div>
@@ -154,26 +154,26 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q5-water" data-label="Water bottles and other beverage bottles" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-water" data-label="Water bottles and other beverage bottles" size="large" variant="danger">Water bottles and other beverage bottles</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-yogurt" data-label="Yogurt cups" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-yogurt" data-label="Yogurt cups" size="large" variant="danger">Yogurt cups</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-shampoo" data-label="Shampoo bottles" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-shampoo" data-label="Shampoo bottles" size="large" variant="danger">Shampoo bottles</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-detergent" data-label="Detergent bottles" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-detergent" data-label="Detergent bottles" size="large" variant="danger">Detergent bottles</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-all" data-label="All of the above" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-all" data-label="All of the above" size="large" variant="success">All of the above</cod-button>
                 </div>
                 </div>
                 <h1 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="large"></cod-icon> That’s correct!</h1>
                 <p class="text-center"><strong>Hard plastic bottles, tubs, jugs, and jars</strong> are recyclable. <br>Please be sure everything is <strong>empty and clean</strong>. Bottle caps and labels should stay on.</p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -195,25 +195,25 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q5-water" data-label="Water bottles and other beverage bottles" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-water" data-label="Water bottles and other beverage bottles" size="large" variant="danger">Water bottles and other beverage bottles</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-yogurt" data-label="Yogurt cups" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-yogurt" data-label="Yogurt cups" size="large" variant="danger">Yogurt cups</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-shampoo" data-label="Shampoo bottles" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-shampoo" data-label="Shampoo bottles" size="large" variant="danger">Shampoo bottles</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-detergent" data-label="Detergent bottles" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-detergent" data-label="Detergent bottles" size="large" variant="danger">Detergent bottles</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-all" data-label="All of the above" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-all" data-label="All of the above" size="large" variant="success">All of the above</cod-button>
                 </div>
                 <h1 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="large"></cod-icon> Wrong! It's all of the above</h1>
                 <p class="text-center"><strong>Hard plastic bottles, tubs, jugs, and jars</strong> are recyclable. <br>Please be sure everything is <strong>empty and clean</strong>. Bottle caps and labels should stay on.</p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -235,8 +235,8 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? Recyclables should be loose in your cart and not in a plastic bag.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="primary">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="primary">False</cod-button>
                 </div>
                 </div>
                 <p class="text-center">2/12</p>
@@ -263,13 +263,13 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? Recyclables should be loose in your cart and not in a plastic bag.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="success">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="danger">False</cod-button>
                 <h1 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="large"></cod-icon> That’s correct!</h1>
                 <p class="text-center">All of your recyclable items should be placed <strong>loosely in your recycling cart</strong> and <strong>not in a bag.</strong> <br>This helps the sorting process at the recycling center. </p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -290,13 +290,13 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? Recyclables should be loose in your cart and not in a plastic bag.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="success">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="danger">False</cod-button>
                 <h1 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="large"></cod-icon> Wrong! It's true</h1>
                 <p class="text-center">All of your recyclable items should be placed <strong>loosely in your recycling cart</strong> and <strong>not in a bag.</strong> <br>This helps the sorting process at the recycling center. </p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -318,8 +318,8 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? These items are ready for recycling.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="primary">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="primary">False</cod-button>
                 </div>
                 </div>
                 <p class="text-center">3/12</p>
@@ -346,14 +346,14 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? These items are ready for recycling.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="danger">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="success">False</cod-button>
                 <h1 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="large"></cod-icon> That’s correct!</h1>
                 <p class="text-center">Please <strong>empty and rinse</strong> all containers before recycling them. <br>Foods and liquids get our recycling carts dirty and stinky, and it contaminates other recyclable items. <br>You do not need to remove labels.
                 <br><strong>PRO TIP:</strong> use a spatula or used napkin to remove sticky food from containers – its quick, easy, and saves water.</p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -374,14 +374,14 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? These items are ready for recycling.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="danger">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="success">False</cod-button>
                 <h1 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="large"></cod-icon> Wrong! It's false</h1>
                 <p class="text-center">Please <strong>empty and rinse</strong> all containers before recycling them. <br>Foods and liquids get our recycling carts dirty and stinky, and it contaminates other recyclable items. <br>You do not need to remove labels.
                 <br><strong>PRO TIP:</strong> use a spatula or used napkin to remove sticky food from containers – its quick, easy, and saves water.</p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -403,8 +403,8 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? Any color glass bottle can be recycled.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="primary">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="primary">False</cod-button>
                 </div>
                 </div>
                 <p class="text-center">4/12</p>
@@ -431,13 +431,13 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? Any color glass bottle can be recycled.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="success">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="danger">False</cod-button>
                 <h1 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="large"></cod-icon> That’s correct!</h1>
                 <p class="text-center"><strong>Empty and clean</strong> glass bottles and jars can be placed in your recycling cart, no matter what color glass. <br>Please DO NOT recycle other glass items such as windows, Pyrex, ceramics, or kitchenware like cups.</p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -458,13 +458,13 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? Any color glass bottle can be recycled.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="success">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="danger">False</cod-button>
                 <h1 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="large"></cod-icon> Wrong! It's true</h1>
                 <p class="text-center"><strong>Empty and clean</strong> glass bottles and jars can be placed in your recycling cart, no matter what color glass. <br>Please DO NOT recycle other glass items such as windows, Pyrex, ceramics, or kitchenware like cups.</p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -487,8 +487,8 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? Styrofoam should be placed in your recycling cart.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="primary">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="primary">False</cod-button>
                 </div>
                 </div>
                 <p class="text-center">5/12</p>
@@ -515,8 +515,8 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? Styrofoam should be placed in your recycling cart.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="danger">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="success">False</cod-button>
                 <h1 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="large"></cod-icon> That’s correct!</h1>
                 <p class="text-center">Styrofoam <strong>DOES NOT GO</strong> in your curbside recycling cart.
                 <br>However, you can recycle it by <strong>dropping it off at Recycle Here!</strong> at 5960 Lincoln St.
@@ -527,7 +527,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <br><br>Recycle Here! collects paper, cardboard, books, metal, plastic, and more! </p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -548,8 +548,8 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? Styrofoam should be placed in your recycling cart.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="danger">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="success">False</cod-button>
                 <h1 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="large"></cod-icon> Wrong! It's false</h1>
                 <p class="text-center">Styrofoam <strong>DOES NOT GO</strong> in your curbside recycling cart.
                 <br>However, you can recycle it by <strong>dropping it off at Recycle Here!</strong> at 5960 Lincoln St.
@@ -560,7 +560,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <br><br>Recycle Here! collects paper, cardboard, books, metal, plastic, and more! </p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -583,13 +583,13 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q3-curbside" data-label="Curbside Recycling Cart" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q3-curbside" data-label="Curbside Recycling Cart" size="large" variant="primary">Curbside Recycling Cart</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q3-no-recycle" data-label="You can’t recycle plastic bags" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q3-no-recycle" data-label="You can’t recycle plastic bags" size="large" variant="primary">You can’t recycle plastic bags</cod-button>
                 </div>
                 <div>
-                <cod-button data-id="q3-drop-off" data-label="Drop off plastic bags at a retail store such as Meijer, Kroger, or your local market." data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q3-drop-off" data-label="Drop off plastic bags at a retail store such as Meijer, Kroger, or your local market." size="large" variant="primary">Drop off plastic bags at a retail store such as Meijer, Kroger, or your local market.</cod-button>
                 </div>
                 </div>
                 </div>
@@ -618,13 +618,13 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q3-curbside" data-label="Curbside Recycling Cart" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q3-curbside" data-label="Curbside Recycling Cart" size="large" variant="danger">Curbside Recycling Cart</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q3-no-recycle" data-label="You can’t recycle plastic bags" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q3-no-recycle" data-label="You can’t recycle plastic bags" size="large" variant="danger">You can’t recycle plastic bags</cod-button>
                 </div>
                 <div>
-                <cod-button data-id="q3-drop-off" data-label="Drop off plastic bags at a retail store such as Meijer, Kroger, or your local market." data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q3-drop-off" data-label="Drop off plastic bags at a retail store such as Meijer, Kroger, or your local market." size="large" variant="success">Drop off plastic bags at a retail store such as Meijer, Kroger, or your local market.</cod-button>
                 </div>
                 </div>
                 <h1 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="large"></cod-icon> That’s correct!</h1>
@@ -633,7 +633,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <br>Even better, you can reuse them or bring reusable bags to go shopping!  </p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -655,13 +655,13 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q3-curbside" data-label="Curbside Recycling Cart" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q3-curbside" data-label="Curbside Recycling Cart" size="large" variant="danger">Curbside Recycling Cart</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q3-no-recycle" data-label="You can’t recycle plastic bags" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q3-no-recycle" data-label="You can’t recycle plastic bags" size="large" variant="danger">You can’t recycle plastic bags</cod-button>
                 </div>
                 <div>
-                <cod-button data-id="q3-drop-off" data-label="Drop off plastic bags at a retail store such as Meijer, Kroger, or your local market." data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q3-drop-off" data-label="Drop off plastic bags at a retail store such as Meijer, Kroger, or your local market." size="large" variant="success">Drop off plastic bags at a retail store such as Meijer, Kroger, or your local market.</cod-button>
                 </div>
                 </div>
                 <h1 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="large"></cod-icon> Wrong! It's drop them off</h1>
@@ -670,7 +670,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <br>Even better, you can reuse them or bring reusable bags to go shopping!  </p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -692,8 +692,8 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q:</strong> True or false? Old garden hoses, wire hangers, and string lights should be put in your recycling cart.</p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="primary">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="primary">False</cod-button>
                 </div>
                 </div>
                 <p class="text-center">7/12</p>
@@ -719,15 +719,15 @@ export default class RecyclingChallenge extends HTMLElement {
                 <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%206.png" alt="garden hose, wire hangers and string lights">
                 <p class="text-center mt-3"><strong>Q:</strong> True or false? Old garden hoses, wire hangers, and string lights should be put in your recycling cart.</p>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="danger">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="success">False</cod-button>
                 </div>
                 </div>
                 <h1 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="large"></cod-icon> That’s correct!</h1>
                 <p class="text-center">Garden hoses, electric cords, string lights, and other wire items should <strong>NOT</strong> be in your recycling cart. <br><strong>These items get tangled up</strong> in the recycling sorting equipment.</p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -747,15 +747,15 @@ export default class RecyclingChallenge extends HTMLElement {
                 <img loading="lazy" style="width: 15em; max-width: 100%; margin:auto;" src="https://detroitmi.gov/sites/detroitmi.localhost/files/2023-03/Question%206.png" alt="garden hose, wire hangers and string lights">
                 <p class="text-center mt-3"><strong>Q:</strong> True or false? Old garden hoses, wire hangers, and string lights should be put in your recycling cart.</p>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="danger">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="success">False</cod-button>
                 </div>
                 </div>
                 <h1 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="large"></cod-icon> Wrong! It's false</h1>
                 <p class="text-center">Garden hoses, electric cords, string lights, and other wire items should <strong>NOT</strong> be in your recycling cart. <br><strong>These items get tangled up</strong> in the recycling sorting equipment.</p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -778,16 +778,16 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q5-soup" data-label="Soup cans" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-soup" data-label="Soup cans" size="large" variant="primary">Soup cans</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-pop" data-label="Pop cans" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-pop" data-label="Pop cans" size="large" variant="primary">Pop cans</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-foil" data-label="Aluminum foil" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-foil" data-label="Aluminum foil" size="large" variant="primary">Aluminum foil</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-all" data-label="All of the above" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-all" data-label="All of the above" size="large" variant="primary">All of the above</cod-button>
                 </div>
                 </div>
                 </div>
@@ -816,22 +816,22 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q5-soup" data-label="Soup cans" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-soup" data-label="Soup cans" size="large" variant="danger">Soup cans</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-pop" data-label="Pop cans" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-pop" data-label="Pop cans" size="large" variant="danger">Pop cans</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-foil" data-label="Aluminum foil" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-foil" data-label="Aluminum foil" size="large" variant="danger">Aluminum foil</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-all" data-label="All of the above" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-all" data-label="All of the above" size="large" variant="success">All of the above</cod-button>
                 </div>
                 <h1 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="large"></cod-icon> That’s correct!</h1>
                 <p class="text-center">Please <strong>empty and clean</strong> all containers before recycling them. <br>You do not need to remove labels.</p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -853,22 +853,22 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q5-soup" data-label="Soup cans" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-soup" data-label="Soup cans" size="large" variant="danger">Soup cans</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-pop" data-label="Pop cans" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-pop" data-label="Pop cans" size="large" variant="danger">Pop cans</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-foil" data-label="Aluminum foil" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-foil" data-label="Aluminum foil" size="large" variant="danger">Aluminum foil</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-all" data-label="All of the above" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-all" data-label="All of the above" size="large" variant="success">All of the above</cod-button>
                 </div>
                 <h1 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="large"></cod-icon> Wrong! It's all of the above</h1>
                 <p class="text-center">Please <strong>empty and clean</strong> all containers before recycling them. <br>You do not need to remove labels.</p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -891,10 +891,10 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q5-recycling" data-label="Recycling cart" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-recycling" data-label="Recycling cart" size="large" variant="primary">Recycling cart</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-trash" data-label="Trash cart" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-trash" data-label="Trash cart" size="large" variant="primary">Trash cart</cod-button>
                 </div>
                 </div>
                 </div>
@@ -923,10 +923,10 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q5-recycling" data-label="Recycling cart" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-recycling" data-label="Recycling cart" size="large" variant="danger">Recycling cart</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-trash" data-label="Trash cart" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-trash" data-label="Trash cart" size="large" variant="success">Trash cart</cod-button>
                 </div>
                 </div>
                 <h1 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="large"></cod-icon> That’s correct!</h1>
@@ -935,7 +935,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <strong>PRO TIP:</strong> when ordering take-out, ask for “no utensils” if you don’t need them!</p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -957,10 +957,10 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q5-recycling" data-label="Recycling cart" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-recycling" data-label="Recycling cart" size="large" variant="danger">Recycling cart</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-trash" data-label="Trash cart" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-trash" data-label="Trash cart" size="large" variant="success">Trash cart</cod-button>
                 </div>
                 </div>
                 <h1 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="large"></cod-icon> Wrong! It's trash cart</h1>
@@ -969,7 +969,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <strong>PRO TIP:</strong> when ordering take-out, ask for “no utensils” if you don’t need them!</p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -991,8 +991,8 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q:</strong> True or false? Clothes, rags, and other textiles can be placed in your curbside recycling cart.</p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="primary">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="primary">False</cod-button>
                 </div>
                 </div>
                 <p class="text-center">10/12</p>
@@ -1019,13 +1019,13 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q:</strong> True or false? Clothes, rags, and other textiles can be placed in your curbside recycling cart.</p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="danger">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="success">False</cod-button>
                 <h1 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="large"></cod-icon> That’s correct!</h1>
                 <p class="text-center">Clothes, rags, shoes, and other textiles <strong>cannot be recycled</strong> curbside. <br>We recommend finding a local <strong>donation center for reusable items.</strong></p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -1046,13 +1046,13 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q:</strong> True or false? Clothes, rags, and other textiles can be placed in your curbside recycling cart.</p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="danger">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="success">False</cod-button>
                 <h1 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="large"></cod-icon> Wrong! It's false</h1>
                 <p class="text-center">Clothes, rags, shoes, and other textiles <strong>cannot be recycled</strong> curbside. <br>We recommend finding a local <strong>donation center for reusable items.</strong></p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -1074,8 +1074,8 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? Batteries, electronics, and other small appliances go in your recycling cart.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="primary">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="primary">False</cod-button>
                 </div>
                 </div>
                 <p class="text-center">11/12</p>
@@ -1102,15 +1102,15 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? Batteries, electronics, and other small appliances go in your recycling cart.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="danger">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="success">False</cod-button>
                 <h1 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="large"></cod-icon> That’s correct!</h1>
                 <p class="text-center"><strong>Drop off</strong> batteries, electronics, and other small appliances <strong>at the Household Hazardous Waste Facility</strong>.<br>
                 Putting these items in your curbside cart is dangerous! <br>
                 Visit the <strong>Household Hazardous Waste Facility</strong> at 2000 E Ferry St. Open on:<br><strong>Thursdays from 7:30am – 2pm, <br>or every fourth Saturday from 8am – 2pm. </strong></p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -1131,15 +1131,15 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center mt-3"><strong>Q: True or false? Batteries, electronics, and other small appliances go in your recycling cart.</strong></p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-id="q1-true" data-label="True" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="q1-false" data-label="False" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-true" data-label="True" size="large" variant="danger">True</cod-button>
+                <cod-button data-id="q1-false" data-label="False" size="large" variant="success">False</cod-button>
                 <h1 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="large"></cod-icon> Wrong! It's false</h1>
                 <p class="text-center"><strong>Drop off</strong> batteries, electronics, and other small appliances <strong>at the Household Hazardous Waste Facility</strong>.<br>
                 Putting these items in your curbside cart is dangerous! <br>
                 Visit the <strong>Household Hazardous Waste Facility</strong> at 2000 E Ferry St. Open on:<br><strong>Thursdays from 7:30am – 2pm, <br>or every fourth Saturday from 8am – 2pm. </strong></p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -1162,19 +1162,19 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q5-coffee" data-label="Coffee cups" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-coffee" data-label="Coffee cups" size="large" variant="primary">Coffee cups</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-envelopes" data-label="Envelopes with plastic windows" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-envelopes" data-label="Envelopes with plastic windows" size="large" variant="primary">Envelopes with plastic windows</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-juice" data-label="Orange juice carton" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-juice" data-label="Orange juice carton" size="large" variant="primary">Orange juice carton</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-magazines" data-label="Magazines" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-magazines" data-label="Magazines" size="large" variant="primary">Magazines</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-all" data-label="All of the above" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-all" data-label="All of the above" size="large" variant="primary">All of the above</cod-button>
                 </div>
                 </div>
                 </div>
@@ -1203,19 +1203,19 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q5-coffee" data-label="Coffee cups" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-coffee" data-label="Coffee cups" size="large" variant="danger">Coffee cups</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-envelopes" data-label="Envelopes with plastic windows" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-envelopes" data-label="Envelopes with plastic windows" size="large" variant="danger">Envelopes with plastic windows</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-juice" data-label="Orange juice carton" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-juice" data-label="Orange juice carton" size="large" variant="danger">Orange juice carton</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-magazines" data-label="Magazines" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-magazines" data-label="Magazines" size="large" variant="danger">Magazines</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-all" data-label="All of the above" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-all" data-label="All of the above" size="large" variant="success">All of the above</cod-button>
                 </div>
                 </div>
                 <h1 class="text-center pass-q mt-2"><cod-icon data-icon="check-circle" data-size="large"></cod-icon> That’s correct!</h1>
@@ -1224,7 +1224,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <br><strong>PRO TIP:</strong> Break down your cardboard boxes to save room in your cart! </p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -1264,19 +1264,19 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <div class="container text-center mb-2">
                 <div class="mb-1">
-                <cod-button data-id="q5-coffee" data-label="Coffee cups" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-coffee" data-label="Coffee cups" size="large" variant="danger">Coffee cups</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-envelopes" data-label="Envelopes with plastic windows" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-envelopes" data-label="Envelopes with plastic windows" size="large" variant="danger">Envelopes with plastic windows</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-juice" data-label="Orange juice carton" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-juice" data-label="Orange juice carton" size="large" variant="danger">Orange juice carton</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-magazines" data-label="Magazines" data-background-color="danger" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-magazines" data-label="Magazines" size="large" variant="danger">Magazines</cod-button>
                 </div>
                 <div class="mb-1">
-                <cod-button data-id="q5-all" data-label="All of the above" data-background-color="success" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q5-all" data-label="All of the above" size="large" variant="success">All of the above</cod-button>
                 </div>
                 </div>
                 <h1 class="text-center fail-q mt-2"><cod-icon data-icon="exclamation-circle" data-size="large"></cod-icon> Wrong! It's all of the above</h1>
@@ -1285,7 +1285,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 <br><strong>PRO TIP:</strong> Break down your cardboard boxes to save room in your cart! </p>
                 </div>
                 <div class="container text-center">
-                <cod-button data-id="q1-next" data-label="Next" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="q1-next" data-label="Next" size="large" variant="primary">Next</cod-button>
                 </div>
                 </div>
                 `;
@@ -1325,8 +1325,8 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center">Looks like there is still a lot to learn about recycling.
                 <br><strong>Please retake the recycling quiz to receive your free container.</strong></p>
                 <div class="container text-center mb-2">
-                <cod-button data-id="video-btn" data-label="Rewatch Video" data-background-color="warning" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
-                <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button data-id="video-btn" data-label="Rewatch Video" size="large" variant="warning">Rewatch Video</cod-button>
+                <cod-button data-id="retake-btn" data-label="Retake Quiz" size="large" variant="warning">Retake Quiz</cod-button>
                 </div>
                 </div>
                 <div class="success">
@@ -1360,8 +1360,8 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center">Your score was ${rc.answers.length}/12</p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-label="Request FREE Cart" data-size="large" data-background-color="warning" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="https://seeclickfix.com/web_portal/HqbyN8hY9UGyuhFwxK7LaZeZ/report/category/53351/location" data-id="free-cart"></cod-button>
-                <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button size="large" data-label="Request FREE Cart" variant="warning" href="https://seeclickfix.com/web_portal/HqbyN8hY9UGyuhFwxK7LaZeZ/report/category/53351/location" data-id="free-cart">Request FREE Cart</cod-button>
+                <cod-button data-id="retake-btn" data-label="Retake Quiz" size="large" variant="primary">Retake Quiz</cod-button>
                 </div>
                 </div>
                 <ul>
@@ -1401,8 +1401,8 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center">Your score was ${rc.answers.length}/12</p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-label="Request FREE Cart" data-size="large" data-background-color="warning" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="https://seeclickfix.com/web_portal/HqbyN8hY9UGyuhFwxK7LaZeZ/report/category/53351/location" data-id="free-cart"></cod-button>
-                <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button size="large" data-label="Request FREE Cart" href="https://seeclickfix.com/web_portal/HqbyN8hY9UGyuhFwxK7LaZeZ/report/category/53351/location" data-id="free-cart" variant="warning">Request FREE Cart</cod-button>
+                <cod-button data-id="retake-btn" data-label="Retake Quiz" size="large" variant="primary">Retake Quiz</cod-button>
                 </div>
                 </div>
                 <ul>
@@ -1442,8 +1442,8 @@ export default class RecyclingChallenge extends HTMLElement {
                 <p class="text-center">Your score was ${rc.answers.length}/12</p>
                 </div>
                 <div class="container text-center mb-2">
-                <cod-button data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-label="Request FREE Cart" data-size="large" data-background-color="warning" data-img="" data-img-alt="" data-icon="" data-icon-order="" data-icon-size="" data-hover="true" data-shape="fluid" data-aria-label="" data-disable="false" data-link="https://seeclickfix.com/web_portal/HqbyN8hY9UGyuhFwxK7LaZeZ/report/category/53351/location" data-id="free-cart"></cod-button>
-                <cod-button data-id="retake-btn" data-label="Retake Quiz" data-background-color="primary" data-primary="true" data-extra-classes="fs-3 fw-bold" data-size="lg" data-img-alt="" data-icon=""></cod-button>
+                <cod-button size="large" data-label="Request FREE Cart" href="https://seeclickfix.com/web_portal/HqbyN8hY9UGyuhFwxK7LaZeZ/report/category/53351/location" data-id="free-cart" variant="warning">Request FREE Cart</cod-button>
+                <cod-button data-id="retake-btn" data-label="Retake Quiz" size="large" variant="primary">Retake Quiz</cod-button>
                 </div>
                 </div>
                 <ul>
