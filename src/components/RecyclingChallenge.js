@@ -1366,7 +1366,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <ul>
                     <li>Your recycling cart should be delivered to your curb in the next 2-4 weeks.</li>
-                    <li>Set out your blue recycling cart every other week, the same week as bulk and yard waste.</li>
+                    <li>Set out your blue recycling cart every week.</li>
                     <li>Check out the <a href="https://detroitmi.gov/webapp/find-your-waste-pickup-schedule" target="_blank">Find Your Waste Pickup Schedule tool</a> to confirm your next pickup date and sign up for text reminders.</li>
                 </ul>
                 <div class="d-flex">
@@ -1407,7 +1407,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <ul>
                     <li>Your recycling cart should be delivered to your curb in the next 2-4 weeks.</li>
-                    <li>Set out your blue recycling cart every other week, the same week as bulk and yard waste.</li>
+                    <li>Set out your blue recycling cart every week.</li>
                     <li>Check out the <a href="https://detroitmi.gov/webapp/find-your-waste-pickup-schedule" target="_blank">Find Your Waste Pickup Schedule tool</a> to confirm your next pickup date and sign up for text reminders.</li>
                 </ul>
                 <div class="d-flex">
@@ -1448,7 +1448,7 @@ export default class RecyclingChallenge extends HTMLElement {
                 </div>
                 <ul>
                     <li>Your recycling cart should be delivered to your curb in the next 2-4 weeks.</li>
-                    <li>Set out your blue recycling cart every other week, the same week as bulk and yard waste.</li>
+                    <li>Set out your blue recycling cart every week.</li>
                     <li>Check out the <a href="https://detroitmi.gov/webapp/find-your-waste-pickup-schedule" target="_blank">Find Your Waste Pickup Schedule tool</a> to confirm your next pickup date and sign up for text reminders.</li>
                 </ul>
                 <div class="d-flex">
